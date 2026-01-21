@@ -74,31 +74,25 @@ body {
 }
 
 /* ---------- Side Navigation (Desktop) ---------- */
+/* Desktop responsive sidenav */
 .sidenav {
   height: 100%;
-  width: 160px;
+  width: 20vw;              /* responsive width */
+  max-width: 240px;         /* prevents it getting too wide */
+  min-width: 160px;         /* prevents it getting too small */
   position: fixed;
   top: 0;
   left: 0;
   background-image: linear-gradient(to bottom, #ffffff, #808080);
+  overflow-x: hidden;
   padding-top: 5rem;
 }
 
-.sidenav a {
-  display: block;
-  padding: 12px 16px;
-  font-size: 20px;
-  color: #2c3e50;
-  text-decoration: none;
-}
-
-.sidenav a:hover {
-  color: #3498db;
-}
-
+/* Keep main content aligned */
 .main {
-  margin-left: 160px;
-  padding: 6rem 20px 20px;
+  margin-left: 20vw;
+  margin-left: clamp(160px, 20vw, 240px);
+  padding: 0 10px;
 }
 
 /* ---------- Tablet ---------- */
