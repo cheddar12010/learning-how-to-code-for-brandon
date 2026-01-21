@@ -1,102 +1,95 @@
+/* ---------- Base ---------- */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
+/* ---------- Navbar ---------- */
 .navbar {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
+  display: flex;
+  list-style: none;
+  gap: 2rem;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-weight: 500;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: #3498db;
+  color: #3498db;
 }
 
+/* ---------- Hero ---------- */
 .hero {
-    background: linear-gradient(135deg, #3498db, #2c3e50);
-    color: white;
-    padding: 8rem 2rem 4rem;
-    text-align: center;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  color: white;
+  padding: 8rem 2rem 4rem;
+  text-align: center;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+  font-size: 1.2rem;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #84d8ff96;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #84d8ff96;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
+/* ---------- Side Navigation (Desktop) ---------- */
 .sidenav {
-  height: 100%; 
-  width: 160px; 
-  position: fixed; 
-  z-index: 1; 
-  top: 0; 
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  top: 0;
   left: 0;
-  background-image: linear-gradient(to bottom, #ffffff, #808080); 
-  overflow-x: hidden; 
+  background-image: linear-gradient(to bottom, #ffffff, #808080);
   padding-top: 5rem;
 }
 
 .sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #2c3e50;
   display: block;
-  padding-bottom: 20px;
+  padding: 12px 16px;
+  font-size: 20px;
+  color: #2c3e50;
+  text-decoration: none;
 }
 
 .sidenav a:hover {
@@ -104,16 +97,75 @@ body {
 }
 
 .main {
-  margin-left: 150px; 
-  padding: 0px 10px;
+  margin-left: 160px;
+  padding: 6rem 20px 20px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+/* ---------- Tablet ---------- */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  /* Navbar stack */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  /* Side nav becomes top bar */
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .sidenav a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .main {
+    margin-left: 0;
+    padding-top: 2rem;
+  }
+
+  .hero {
+    padding: 6rem 1rem 3rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Small Mobile ---------- */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+  }
 }
