@@ -1,38 +1,4 @@
-.floating-square {
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(135deg, #ff7eb3, #ff758c);
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: float 3s ease-in-out infinite, spin 3s linear infinite;
-  }
-  
-  @keyframes float {
-    0% {
-      transform: translate(-50%, -50%) translateY(0) rotate(0deg);
-    }
-    50% {
-      transform: translate(-50%, -50%) translateY(-20px) rotate(180deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) translateY(0) rotate(360deg);
-    }
-  }
-  
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-* {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
