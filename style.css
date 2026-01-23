@@ -158,5 +158,6 @@ footer {
 
 .about p {
   padding: 3rem;
-  border-radius: 1rem
+  border-radius: 1rem;
+  box-shadow: 4px 4px 4px 4px;
 }
