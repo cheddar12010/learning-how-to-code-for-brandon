@@ -153,4 +153,10 @@ footer {
 
 .about {
   text-align: center;
+  padding-top: 2rem;
+}
+
+.about p {
+  padding: 3rem
+  border-radius: 1rem
 }
